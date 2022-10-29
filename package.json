@@ -6,11 +6,11 @@
   "author": "Kirill Novikov",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/_index.html",
-    "build": "parcel build src/_index.html --out-dir docs"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir docs"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "parcel-bundler": "^1.12.3"
+    "parcel-bundler": "1.12.5"
   }
 }
