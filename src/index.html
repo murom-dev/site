@@ -23,35 +23,65 @@
   <meta name="msapplication-TileImage" content="assets/icon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Murom.dev - software developers community">
-  <meta name="twitter:description" content="Meetup and other events announce in Murom city.">
+  <meta name="twitter:title" content="Murom.dev - biggest software developers community in Murom">
+  <meta name="twitter:description" content="Meetup and other events IT events in Murom">
   <meta name="twitter:image" content="assets/images/murom.dev.png">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Murom.dev - software developers community">
   <meta property="og:url" content="https://murom.dev">
   <meta property="og:image" content="assets/images/murom.dev.png">
-</head>
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-      font-family: 'Roboto Mono';
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
     }
 
     @font-face {
@@ -135,113 +165,225 @@
       font-style: normal;
     }
 
-    ul {
-      list-style: none;
-    }
-
-    h1 {
+    .logo {
       position: relative;
       display: inline-block;
-      font-weight: bold;
-      font-style: normal;
-      font-size: 38px;
-      line-height: 38px;
-      color: #99C794;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 20px;
+      color: #99c794;
+      font-family: 'Roboto Mono';
     }
 
-    h2 {
-      font-weight: normal;
-      font-style: normal;
-      font-size: 18px;
+    .logo-description {
+      font-size: 16px;
+      font-weight: 100;
+      font-family: 'Roboto Mono';
     }
 
-    h3 {
-      font-weight: 300;
-      font-style: normal;
-      color: #D8DEE9;
-    }
-
-    body {
-      background-color: #1B2B34;
-    }
-
-    a {
-      color: #C594C5;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #c47cc5;
-    }
-
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 30px;
-    }
-
-    h1::after {
-      content: "";
-      display: inline-block;
-      background-color: #606060;
-      width: 10px;
-      height: 22px;
-      margin-left: 6px;
-      -webkit-animation: blink 1s step-end infinite;
-      animation: blink 1s step-end infinite;
-    }
-
-    @-webkit-keyframes blink {
-      0% { opacity: 1.0; }
-      50% { opacity: 0.0; }
-      100% { opacity: 1.0; }
-    }
-
-    @keyframes blink {
-      0% { opacity: 1.0; }
-      50% { opacity: 0.0; }
-      100% { opacity: 1.0; }
+    .card-text-trunc {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 220px;
     }
   </style>
-  <body>
+</head>
+<body>
+
+<header>
+  <div class="navbar navbar-dark shadow-sm" style="background-color: #1b2b34">
     <div class="container">
-      <div class="content">
-        <h1>murom.dev</h1>
-        <h3>murom developers community &#128075;</h3>
-        <br>
-        <br>
-        <br>
-        <h3>//--------events---------</h3>
-        <br>
-        <ul>
-          <li>
-<!--            <a href="https://muromdev.timepad.ru/event/1044977/" rel="noreferrer" target="_blank">murom.dev/fest#1</a>-->
-            <a href="https://www.youtube.com/playlist?list=PL5sYhhwBXxANNJNpU_PU9H46CDz1Rm1Xe" rel="noreferrer" target="_blank">murom.dev/fest#1(videos)</a>
-            <h3>watch videos from our first meetup</h3>
-          </li>
-          <li>
-            <!--            <a href="https://muromdev.timepad.ru/event/1044977/" rel="noreferrer" target="_blank">murom.dev/fest#1</a>-->
-            <a href="https://www.youtube.com/playlist?list=PL5sYhhwBXxAMZJmaYgi9K32hb7c3NHfVM" rel="noreferrer" target="_blank">murom.dev/fest#2(videos)</a>
-            <h3>watch videos from our second meetup</h3>
-          </li>
-        </ul>
-        <br>
-        <br>
-        <h3>//--------contacts-------</h3>
-        <br>
-        <ul>
-          <li><a href="https://t.me/muromdev" rel="noreferrer" target="_blank">t.me/muromdev</a></li>
-          <li><a href="https://vk.com/muromdev" rel="noreferrer" target="_blank">vk.com/muromdev</a></li>
-          <li><a href="https://www.youtube.com/channel/UCrhHPHcR-b8brX72iLW6zqg" rel="noreferrer" target="_blank">youtube.com</a></li>
-        </ul>
+      <a href="#" class="navbar-brand d-flex" style="flex-direction: column">
+        <span class="logo">murom.dev</span>
+        <span class="logo-description">murom developers community</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <p class="lead text-muted">Biggest community of professional developers and IT specialists in Murom city and around.</p>
+
+        <p>
+          <a href="#events" class="btn btn-primary my-2">Check our events &#128075;</a>
+        </p>
+
       </div>
     </div>
-  </body>
+  </section>
+
+  <div id="events" class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="assets/images/md-tbn-1.jpeg" class="card-img-top" alt="...">
+
+            <div class="card-body">
+              <p class="card-text card-text-trunc">Алексей расскажет о практиках использования фича-флагов
+                для безопасного развертывания и управления функциональностью приложений.
+                Чем развертывание (deploy) отличается от релиза?
+                Как проверить бизнес-идеи в боевых условиях на реальных пользователях?
+                Как управлять техническим долгом при помощи фича-флагов без боли и переплат?</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://youtu.be/O9ek6szp5Hs" target="_blank" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                </div>
+                <small class="text-muted">Alexey Shirmanov</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="assets/images/md-tmb-2.jpeg" class="card-img-top" alt="Machine Learning и Computer Vision с использованием Mediapipe">
+
+            <div class="card-body">
+              <p class="card-text card-text-trunc">Около 10 лет назад начался взрывной рост алгоритмов машинного обучения однако для многих разработчиков это все еще тема покрытая дымкой.
+                Я покажу как на практике не имея опыта работы с алгоритмами Machine Learning и Computer Vision начать их использовать в своих мобильных приложения или сервисах на примере фреймворка Mediapipe</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://youtu.be/627PafrzWVw" target="_blank" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                </div>
+                <small class="text-muted">Kirill Novikov</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="assets/images/md-tmb-3.jpeg" class="card-img-top" alt="Как я использовал GamepadApi to MidiApi в pet-проекте">
+
+            <div class="card-body">
+              <p class="card-text card-text-trunc">Формально я бэкенд лид в дружной команде. В работе совмещаю должности архитектора, лида, разработчика и хорошего парня, который всегда поможет. За последний год приложил руку к созданию крупного новостного портала, игрового стрим-движка, системы опросов и ответов, тим-игр. Но насколько бы не были интересны проекты, иногда они могут превратиться в рутину. Разжечь страсть к работе может помочь интрижка со стороны Pet-проектов. Не волнуйтесь, многие работодатели положительно относятся к ним, ведь из них могут вырасти действительно интересные проекты, либо полезные инструменты улучшающие рабочие процессы. В любом случае хороший Pet-проект помогает талантливому разработчику развивать свою страсть. Именно поэтому в своем докладе я хочу поделиться своим опытом развития скромного Pet-проекта, а попутно рассказать о тех технологиях, которые я использовал при его реализации.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://youtu.be/2n8G4YqnkLc" target="_blank" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                </div>
+                <small class="text-muted">Dmitry Popov</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="assets/images/md-tmb-4.jpeg" class="card-img-top" alt="Распределённые системы «суперсервисов» на службе ФССП">
+
+            <div class="card-body">
+              <p class="card-text card-text-trunc">В докладе Дмитрий поделится с участниками своим опытом в создании одного из самых быстрых и популярных сервисов госуслуг для крупного федерального ведомства и расскажет о том, как в этом помогли распределённые системы. А ещё познакомит с технологиями которые применялись в разработке.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://youtu.be/6VWvgTziYiw" target="_blank" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                </div>
+                <small class="text-muted">Dmitry Gorchakov</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="assets/images/md-tmb-5.jpeg" class="card-img-top" alt="Высоконагруженные сервисы электронного правительства">
+
+            <div class="card-body">
+              <p class="card-text card-text-trunc">Дмитрий и Кристина рассказали о пути создания архитектуры для одного из самых используемых сервисов электронного правительства. Обработка огромного числа запросов, архитектурные решения и их результаты вы найдете в этом докладе</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://youtu.be/jBFKM5uOO6g" target="_blank" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                </div>
+                <small class="text-muted">Dmitry Gorchakov</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="assets/images/md-tmb-6.jpeg" class="card-img-top" alt="Методы защиты сайта от парсинга и способы из обхода">
+
+            <div class="card-body">
+              <p class="card-text card-text-trunc">В докладе Дмитрий делиться своим опытом по методам защиты сайта от парсинга и способы из обхода. Как можно уменьшить вероятность того что данные с вашего сайта будут использованы и как такую защиту обойти</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://youtu.be/jFdq7BSlDj0" target="_blank" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                </div>
+                <small class="text-muted">Dmitry Popov</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="assets/images/md-tmb-7.jpeg" class="card-img-top" alt="JAM stack как создавать молниеносные сайты">
+
+            <div class="card-body">
+              <p class="card-text card-text-trunc">JAM stack - это новый подход к созданию сайтов и веб приложений. Он объединил в себе новые подходы как к дистрибюции контента, так и к его отображению. Из доклада вы узнаете о современных инструментах, и опыте создания сайтов на JAM stack</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://youtu.be/1LsjxGYJRJw" target="_blank" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                </div>
+                <small class="text-muted">Kirill Novikov</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="assets/images/md-tmb-8.jpeg" class="card-img-top" alt="Flutter - кросс-платформенная разработка мобильных приложений">
+
+            <div class="card-body">
+              <p class="card-text card-text-trunc">Flutter - фреймворк для разработки гибридных мобильных приложений от компании Google. Максим расскажет как устроена разработка приложений на этом фреймворке, проанализирует плюсы и минусы в сравнении с разработкой нативных приложений</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://youtu.be/Q0Oh6UKc_TQ" target="_blank" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                </div>
+                <small class="text-muted">Maxim Pervushin</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="assets/images/md-tmb-9.jpeg" class="card-img-top" alt="Как мы разработали приложение в AR, нас заметил Apple и пригласил на WWDC">
+
+            <div class="card-body">
+              <p class="card-text card-text-trunc">Как сделать так, чтобы твое приложение попало в редакторскую подборку в Apple Store? Как написать такое приложение чтобы Apple его заметила и пригласила вас как разработчика на WWDC? Ответы на эти вопросы вы найдете в докладе Вячеслава</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://youtu.be/_eDQn8g9xzM" target="_blank" type="button" class="btn btn-sm btn-outline-secondary">View</a>
+                </div>
+                <small class="text-muted">Vyacheslav Zotov</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-0">Follow us on <a href="https://vk.com/muromdev" target="_blank">vk.com/muromdev</a></p>
+    <p class="mb-0">Created by <a href="https://www.linkedin.com/in/kirill-novikov-700b9b20/" target="_blank">Kirill Novikov</a></p>
+  </div>
+</footer>
+
+
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
 </html>
